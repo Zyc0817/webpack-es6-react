@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "597bcd5e924b3f390ab4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7373fafb506c3ee8a330"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -10213,14 +10213,12 @@ module.exports = Hello;
  */
 var React = __webpack_require__(31),
     Body1;
-
 Body1 = React.createClass({
     displayName: "Body1",
 
     getInitialState: function getInitialState() {
         return {
-            user: [],
-            swiper: []
+            user: []
         };
     },
     render: function render() {
@@ -10234,7 +10232,6 @@ Body1 = React.createClass({
                         "li",
                         { key: key },
                         val.ads.map(function (item, key1) {
-                            console.log(item);
                             return React.createElement(
                                 "div",
                                 { key: key1 },
@@ -10263,21 +10260,19 @@ Body1 = React.createClass({
             success: function success(data) {
                 console.log(data);
                 _this.setState({
-                    user: data.T1348647853363,
-                    swiper: data.T1348647853363[0].ads
+                    user: data.T1348647853363
                 });
                 if (data) {
-                    // var mySwiper = new Swiper ('.swiper-container', {
-                    //     autoplay: 1000, //可选选项，自动滑动
-                    //     initialSlide :1,
-                    //     direction : 'horizontal',//横向//'vertical',纵向
-                    //     speed:1000,
-                    //     autoplayDisableOnInteraction : false,//我滑动之后,他还会自动滚动
-                    //     paginationClickable :true,//按小点点是否跳转
-                    //     loop : true,//大图滚动的效果,让4张图达到 4 1 2 3 4 1的效果
-                    //     observer:true,//修改swiper自己或子元素时，自动初始化swiper
-                    //     observeParents:true,//修改swiper的父元素时，自动初始化swiper
-                    // });
+                    var mySwiper = new Swiper('.swiper-container', {
+                        autoplay: 1000, //可选选项，自动滑动
+                        initialSlide: 1,
+                        direction: 'horizontal', //横向//'vertical',纵向
+                        speed: 1000,
+                        autoplayDisableOnInteraction: false, //我滑动之后,他还会自动滚动
+                        paginationClickable: true, //按小点点是否跳转
+                        loop: true, //大图滚动的效果,让4张图达到 4 1 2 3 4 1的效果
+                        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+                        observeParents: true });
                 }
             }
         });
